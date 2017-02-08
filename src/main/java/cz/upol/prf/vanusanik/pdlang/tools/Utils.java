@@ -30,5 +30,9 @@ public class Utils {
 	public static String dots2slashes(String path) {
 		return path.replaceAll(Pattern.quote("."), "/");
 	}
+
+	public static String slashes2dots(String module) {
+		return (module.startsWith("/") ? module.substring(1) : module).replaceAll(Pattern.quote("/"), ".");
+	}
 	
 }
